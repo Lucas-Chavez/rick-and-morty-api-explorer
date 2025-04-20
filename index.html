@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/card.css">
+    <link rel="stylesheet" href="src/css/search.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <title>Explorador de Rick and Morty</title>
+  </head>
+  <body>
+  
+    <h1 class="titulo">Rick and Morty Personajes</h1>
+
+    <div class="seccion-busqueda">
+      <div class="seccion-busqueda-sticky">
+        <div class="contenedor-busqueda">
+          <input type="text" class="campo-busqueda" id="entrada-busqueda" placeholder="Buscar personajes...">
+          <span class="material-icons">search</span>
+        </div>
+      </div>
+      
+      <ul id="lista-personaje" class="contenedor-personajes">
+      </ul>
+    </div>
+      <script src="/src/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+/* Estilos para tarjetas de personajes */
+.tarjeta-personaje {
+    width: 280px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+}
+
+.tarjeta-personaje img {
+    width: 100%;
+    display: block; 
+    object-fit: cover;
+    border-radius: 3px 3px 0 0; 
+    transition: .5s;
+}
+
+.contenido-tarjeta__info {
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background: rgba(27, 27, 27, 0.5);
+    color: white;
+    transition: .5s;
+}
+
+.tarjeta-personaje__ubicacion,
+.tarjeta-personaje__estado {
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.tarjeta-personaje:hover {
+    cursor: pointer;
+}
+
+.tarjeta-personaje:hover .contenido-tarjeta__info {
+    height: auto;
+    padding-bottom: 15px;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.tarjeta-personaje:hover .tarjeta-personaje__ubicacion,
+.tarjeta-personaje:hover .tarjeta-personaje__estado {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tarjeta-personaje:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+/* Estilos para los textos de la tarjeta */
+.tarjeta-personaje__nombre {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-personaje__estado {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.tarjeta-personaje__icono-estado {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.tarjeta-personaje__texto-estado {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #e0e0e0;
+}
+
+.tarjeta-personaje__etiqueta {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.tarjeta-personaje__nombre-ubicacion {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* Media queries para tarjetas responsive */
+@media (max-width: 900px) {
+    .tarjeta-personaje {
+        width: 260px;
+    }
+    }
+
+    @media (max-width: 600px) {
+    .tarjeta-personaje {
+        width: 240px;
+    }
+
+    .tarjeta-personaje__nombre {
+        font-size: 1.1rem;
+    }
+}

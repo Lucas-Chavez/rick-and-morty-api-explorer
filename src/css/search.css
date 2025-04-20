@@ -1,0 +1,30 @@
+/* Estilos del componente de búsqueda */
+.contenedor-busqueda {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.campo-busqueda {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.seccion-busqueda-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 15px 0;
+}
+
