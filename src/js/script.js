@@ -4,12 +4,19 @@ let todosLosPersonajes = [];
 // Función para cargar personajes
 async function fetchPersonajes() {
     try {
-        const respuesta = await fetch('https://rickandmortyapi.com/api/character/');
-        const personajes = await respuesta.json();
+        let url = 'https://rickandmortyapi.com/api/character';
+        todosLosPersonajes = [];
 
-        todosLosPersonajes = personajes.results
+        while (url) {
+            const respuesta = await fetch(url);
+            const personajes = await respuesta.json();
 
-        mostrarPersonajes(todosLosPersonajes) //Mostrar todos los personajes
+            todosLosPersonajes = todosLosPersonajes.concat(personajes.results);
+            url = personajes.info.next; // Si hay una próxima página, continuar
+        }
+
+        mostrarPersonajes(todosLosPersonajes); // Mostrar todos los personajes
+        
     } catch (error) {
         console.error("Error al cargar los personajes: ", error);
     }
